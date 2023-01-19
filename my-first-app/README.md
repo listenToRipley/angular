@@ -2,6 +2,10 @@
 
 Set up with --no-strict and default CSS.
 
+We have also installed bootstrap `npm install --save bootstrap` which has to be added in several places.
+
+In the [angular.json](./angular.json), under "styles include `node_modules/bootstrap/dist/css/bootstrap.min.css`.
+
 ## Default Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
