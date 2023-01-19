@@ -21,3 +21,15 @@ You will be asked if you want to include routing and which style sheet format yo
 ### Bring up a Server
 
 `ng serve`, creates a working server where we can test information.
+
+Default port will be provided when created, usually 4200.
+
+### Navigating Application
+
+The display for all content ends at the src/index.html. Content that is generated is provided inside of the body of that doc.
+
+The content that is generated though src/app/app.component.html.
+
+To provide more dynamic fields information should be provided to src/app/app.component.ts.
+
+If you want to include additional Angular modules they will need to be imported and provided inside src/app/app.module.ts
