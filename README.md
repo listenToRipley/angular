@@ -35,3 +35,11 @@ To provide more dynamic fields information should be provided to src/app/app.com
 If you want to include additional Angular modules they will need to be imported and provided inside src/app/app.module.ts
 
 From front the back main.ts if the first code that runs. `AppModule` is what started off the process. This content will be cross referenced within the app.module.ts. We have to know this content exists at inception.
+
+### Components
+
+A component refers to modular code that will resolve themselves into a whole webpage related to a singular DOM. Example: A nav bar would be one component, while your footer would be another, a the main body a mix of several different components added together.
+
+The backbone of angular is components.
+
+You start with the "app" component which is the "root" of all components. Other children components will be nested inside of your root.
