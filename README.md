@@ -33,3 +33,5 @@ The content that is generated though src/app/app.component.html.
 To provide more dynamic fields information should be provided to src/app/app.component.ts.
 
 If you want to include additional Angular modules they will need to be imported and provided inside src/app/app.module.ts
+
+From front the back main.ts if the first code that runs. `AppModule` is what started off the process. This content will be cross referenced within the app.module.ts. We have to know this content exists at inception.
