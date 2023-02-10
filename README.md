@@ -66,7 +66,9 @@ There is also a shorthand.
 
 This will create a folder inside of [app](./my-first-app/src/app/) with the provided new component name and a css, html, ts and spec.ts files.
 
+spec.ts is used for testing. It is not a required file.
 
+This should also auto add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
 
 ### Decorators
 
