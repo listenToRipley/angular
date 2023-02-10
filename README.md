@@ -8,7 +8,7 @@ Learning Angular from [Udemy.](https://www.udemy.com/course/the-complete-guide-t
 
 ## Using Angular
 
-Uses Typescript.
+Uses Typescript. 
 
 ### Setting up new project
 
@@ -17,6 +17,8 @@ Uses Typescript.
 Optional, include `--no-strict`
 
 You will be asked if you want to include routing and which style sheet format you want to use.
+
+Set up to use [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 ### Bring up a Server
 
@@ -56,7 +58,7 @@ You usually will have your `ts` file and the related `html` file that will house
 
 In order to have access to the components, make sure the are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
 
-Two requirements of all components is they must have a `selector` and `template`. Either a `templateUrl` or `template`. Template will allow you to write inline html elements. Use backticks to allow for js functionality.
+All components is they must have a `selector` and `template`. Either a `templateUrl` or `template`. Template will allow you to write inline html elements. Use backticks to allow for js functionality.
 
 #### CLI Component Creation
 
