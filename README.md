@@ -43,3 +43,19 @@ A component refers to modular code that will resolve themselves into a whole web
 The backbone of angular is components.
 
 You start with the "app" component which is the "root" of all components. Other children components will be nested inside of your root.
+
+Application related contents, such a new components usually live inside of the `./src/app` folder.
+
+Each component should have it's own folder and best practice states that folder should be titled after the component it contains.
+
+The naming convention usually goes: `title.component.ts`, this will aslo be the name of the component.
+
+We use classes to create these components which are known as *Decorators*. We have to import the component type to help differentiate between a regular typescript class and an angular component class. The class use is really what make it possible to reuse these elements.
+
+You usually will have your `ts` file and the related `html` file that will house the template `html` code.
+
+### Decorators
+
+You can identify a decorator in code since it will have an `@` before the element.
+
+You will have to configure these items by providing a JS object with the required information.
