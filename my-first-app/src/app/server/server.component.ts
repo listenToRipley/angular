@@ -1,3 +1,4 @@
+//you may hear this file referred to as the selector.
 import { Component } from "@angular/core";
 
 @Component({

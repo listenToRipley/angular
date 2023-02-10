@@ -44,7 +44,7 @@ The backbone of angular is components.
 
 You start with the "app" component which is the "root" of all components. Other children components will be nested inside of your root.
 
-Application related contents, such a new components usually live inside of the `./src/app` folder.
+Application related contents, such a new components usually live inside of the [app folder](`./my-first-app/src/app`) folder.
 
 Each component should have it's own folder and best practice states that folder should be titled after the component it contains.
 
@@ -53,6 +53,8 @@ The naming convention usually goes: `title.component.ts`, this will aslo be the 
 We use classes to create these components which are known as *Decorators*. We have to import the component type to help differentiate between a regular typescript class and an angular component class. The class use is really what make it possible to reuse these elements.
 
 You usually will have your `ts` file and the related `html` file that will house the template `html` code.
+
+In order to have access to the components, make sure the are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
 
 ### Decorators
 

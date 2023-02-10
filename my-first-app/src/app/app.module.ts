@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component'; //must import the components that are provided in the declaration.
+//the imported component does not need to include the type of the file since it will allow access to all types under the same name.
 
 //allows to bundle into packages.
 //gives angular information features/components
