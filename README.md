@@ -74,9 +74,12 @@ It is important to note that you will need to update your html file accordingly 
 
 Use the html tag, add the component as an attribute inside another tag or include the class name inside the class attribute.
 
-##### Templates 
+While the selector can be an attribute, the attribute cannot be assigned to another component.
+
+##### Templates
 
 Either a `templateUrl` or `template`. Template will allow you to write inline html elements. Use backticks to allow for js functionality.
+
 #### CLI Component Creation
 
 `ng generate component newComponentName`
