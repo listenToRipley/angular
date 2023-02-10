@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
+import { ServerComponent } from './server/server.component'; //must import the components that are provided in the declaration.
 
-@NgModule({
+//allows to bundle into packages.
+//gives angular information features/components
+@NgModule({ //a decorator
   declarations: [
-    AppComponent
+    AppComponent,
+    ServerComponent //"registers" the component. It is part of the application.
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //telling angular which component should you start with.
 })
 export class AppModule { }
