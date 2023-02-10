@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-warning-alert',
+  selector: 'warning-alert',
   templateUrl: './warning-alert.component.html',
   styleUrls: ['./warning-alert.component.css']
 })
