@@ -56,6 +56,8 @@ You usually will have your `ts` file and the related `html` file that will house
 
 In order to have access to the components, make sure the are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
 
+Two requirements of all components is they must have a `selector` and `template`. Either a `templateUrl` or `template`. Template will allow you to write inline html elements. Use backticks to allow for js functionality.
+
 #### CLI Component Creation
 
 `ng generate component newComponentName`
