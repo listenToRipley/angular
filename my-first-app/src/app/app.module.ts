@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component'; //must import the components that are provided in the declaration.
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component'; //must import the components that are provided in the declaration.
 //the imported component does not need to include the type of the file since it will allow access to all types under the same name.
 
 //allows to bundle into packages.
@@ -11,7 +12,8 @@ import { ServerComponent } from './server/server.component'; //must import the c
 @NgModule({ //a decorator
   declarations: [
     AppComponent,
-    ServerComponent //"registers" the component. It is part of the application.
+    ServerComponent,
+    ServersComponent //"registers" the component. It is part of the application.
   ],
   imports: [
     BrowserModule,

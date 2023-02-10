@@ -56,6 +56,18 @@ You usually will have your `ts` file and the related `html` file that will house
 
 In order to have access to the components, make sure the are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
 
+#### CLI Component Creation
+
+`ng generate component newComponentName`
+
+There is also a shorthand.
+
+`ng g c newComponentName`
+
+This will create a folder inside of [app](./my-first-app/src/app/) with the provided new component name and a css, html, ts and spec.ts files.
+
+
+
 ### Decorators
 
 You can identify a decorator in code since it will have an `@` before the element.
