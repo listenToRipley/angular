@@ -99,3 +99,9 @@ This should also auto add your file to the [module](./my-first-app/src/app/app.m
 You can identify a decorator in code since it will have an `@` before the element.
 
 You will have to configure these items by providing a JS object with the required information.
+
+### Databinding
+
+Communication between typescript components/business logic and the template.
+
+The only requirements for "string interpolation" is that it can resolve itself into a string. You cannot provide multiline logic.
