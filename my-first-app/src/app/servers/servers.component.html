@@ -1,7 +1,15 @@
 <button
 class="btn btn-primary"
 [disabled]="!allowNewServer"
-  >Add Server</button>
+(click)="onCreateServer()"
+>
+<!-- disabled provides an example of property binding.
+(click) example of Event Binding
+-->
+Add Server
+</button>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
 

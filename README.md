@@ -152,14 +152,38 @@ flowchart TD
 ]}
 ```
 
-### Databinding
+### Binding
+
+#### Databinding
 
 Communication between typescript components/business logic and the template.
 
 The only requirements for "string interpolation" is that it can resolve itself into a string. You cannot provide multiline logic.
 
-### Property Binding
+You can identify it since you will see it `{{between double curly brackets}}`
+
+#### Property Binding
 
 Providing a specific state to a HTML element through a method/state provided from your typescript.
 
-`[shows property binding in the html]`
+`[shows property binding in the html]="followedTheVariableName"`
+
+You can see examples of this in the [servers files](./my-first-app/src/app/servers/)
+
+#### Event Binding
+
+Instead of using HTML events like `onClick`, you would use `(functionName)="methodFromTSFile"` to provide the event functionality.
+
+#### Which Binding?
+
+Use Databinding for string output.
+
+Property binding for variable output/ functionality.
+
+Don't mix the two! It will break the functionality.
+
+Events are used for results of expected action taken on a specific element.
+
+[List of Properties](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+
+[List of Events](https://developer.mozilla.org/en-US/docs/Web/Events)
