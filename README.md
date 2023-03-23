@@ -174,6 +174,8 @@ You can see examples of this in the [servers files](./my-first-app/src/app/serve
 
 Instead of using HTML events like `onClick`, you would use `(functionName)="methodFromTSFile"` to provide the event functionality.
 
+You can pass the "event" into the associated method by providing `$event` as an argument to the method.
+
 #### Which Binding?
 
 Use Databinding for string output.
