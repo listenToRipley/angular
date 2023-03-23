@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component'; //must import the components that are provided in the declaration.
 //the imported component does not need to include the type of the file since it will allow access to all types under the same name.
+// webpack will provide the type for us.
 
 //allows to bundle into packages.
 //gives angular information features/components

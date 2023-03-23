@@ -38,6 +38,21 @@ If you want to include additional Angular modules they will need to be imported 
 
 From front the back main.ts if the first code that runs. `AppModule` is what started off the process. This content will be cross referenced within the app.module.ts. We have to know this content exists at inception.
 
+```mermaid
+flowchart TD
+    A(/src) --> B
+    B(main.ts) -->|inside main.ts| C["plateformBrowserDynamic().bootstrap(AppModule)"]
+    C -->|inside index.html| D(contains app-root)
+    D -->|path to import app-root| E{/app}
+    E -->|info to display| F(fa:fa-file-code app.component.html)
+    E -->|css| G(fa:fa-file-code app.component.css)
+    E -->|app-root gets name| H(fa:fa-file-code app.component.ts)
+    E -->|what should be accessable| I(fa:fa-file-code app.component.module.ts)
+    H --> I
+    I --> |finds compontents to access| C
+   
+```
+
 ### Components
 
 A component refers to modular code that will resolve themselves into a whole webpage related to a singular DOM. Example: A nav bar would be one component, while your footer would be another, a the main body a mix of several different components added together.
@@ -94,8 +109,93 @@ spec.ts is used for testing. It is not a required file.
 
 This should also auto add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
 
-### Decorators
+#### Decorators
 
 You can identify a decorator in code since it will have an `@` before the element.
 
 You will have to configure these items by providing a JS object with the required information.
+
+### Example
+
+```mermaid
+flowchart TD
+    A{/app}
+    A -->|display| B(fa:fa-file-code app.component.html)
+    A --> C(fa:fa-file-code app.component.css)
+    A -->|app-root gets name| D(fa:fa-file-code app.component.ts)
+    C --> |import css| D
+    A -->|allow access in index.html & main.ts| E(fa:fa-file-code app.component.module.ts)
+    D --> E
+    A--> |only requires 2 files| F{/newCompontent1}
+    E --> B
+    F --> G(fa:fa-file-code CSS)
+    F --> H(fa:fa-file-code TypeScript)
+    H --> |inside the TS file| I[* CCompontent_Sample_Decorator ]
+    I --> E
+    E --> J[route back for access to index.html and main.ts and will be bundled by webpack]
+ 
+```
+
+##### Compontent_Sample_Decorator
+
+```Angular
+@Component {[
+        selector: 'app-new-compontent1
+        templateUrl:./path/to/html or template:<selector></selector>
+        may also include styleUrl: ['./css/path']
+        
+        export class ComponentName implements OnInit {
+            constructor() {}
+                ngOnInit() {
+        }
+    }'
+]}
+```
+
+### Binding
+
+#### Databinding
+
+Communication between typescript components/business logic and the template.
+
+The only requirements for "string interpolation" is that it can resolve itself into a string. You cannot provide multiline logic.
+
+You can identify it since you will see it `{{between double curly brackets}}`
+
+#### Property Binding
+
+Providing a specific state to a HTML element through a method/state provided from your typescript.
+
+`[shows property binding in the html]="followedTheVariableName"`
+
+You can see examples of this in the [servers files](./my-first-app/src/app/servers/)
+
+#### Event Binding
+
+Instead of using HTML events like `onClick`, you would use `(functionName)="methodFromTSFile"` to provide the event functionality.
+
+You can pass the "event" into the associated method by providing `$event` as an argument to the method.
+
+You may need to provide specificity to typescript by going deeper into the element types of HTML.
+
+#### Two Way Binding
+
+Event binding + Property Binding = `[(two way binding!)]`
+
+Must have ngModel and FormModule imported on [module.ts](./my-first-app/src/app/app.module.ts) in order for must of this to function.
+
+You will see [an example of this here](./my-first-app/src/app/servers/servers.component.html)
+
+#### Which Binding?
+
+Use Databinding for string output.
+
+Property binding for variable output/ functionality.
+
+Don't mix the two! It will break the functionality.
+
+Events are used for results of expected action taken on a specific element.
+
+[List of Properties](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+
+[List of Events](https://developer.mozilla.org/en-US/docs/Web/Events)

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-@Component({
+@Component({ 
   selector: 'app-root',
   templateUrl: './app.component.html',
   // styleUrls: ['./app.component.css'] //alternatively
   styles: [`
     h3 {
-      color: brown;
+      color: teal;
       font-family: ser;
     }
   `]

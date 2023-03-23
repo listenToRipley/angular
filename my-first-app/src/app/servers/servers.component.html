@@ -1,3 +1,29 @@
+<label> Server Name</label>
+<input
+  type="text"
+  class="form-control"
+  placeholder="Server Name"
+  [(ngModel)]="serverName"
+>
+<!--
+Line 6 is an example of two way data binding.
+Or you can use regular one way data binding/ event binding:
+(input)="onUpdateServerName($event)"
+-->
+<!-- <p>{{serverName}}</p> -->
+<br>
+<button
+class="btn btn-primary"
+[disabled]="!allowNewServer"
+(click)="onCreateServer()"
+>
+<!-- disabled provides an example of property binding.
+(click) example of Event Binding
+-->
+Add Server
+</button>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
 

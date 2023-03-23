@@ -13,9 +13,28 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ServersComponent implements OnInit {
-  constructor() {}
+
+  allowNewServer: boolean = false;
+  serverCreationStatus:string = 'No server was created.';
+  serverName:string = 'test server';
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    },2000)
+  }
 
   ngOnInit() {
 
   }
+
+  onCreateServer() { //using "on" is best practice to show the action associated with the function
+    this.serverCreationStatus = "Server was created. Server name is " + this.serverName;
+  }
+
+  // no longer need this if you are using two way data binding.
+  onUpdateServerName(event: any) {
+    // console.log(event)
+    this.serverName = (<HTMLInputElement>event.target).value //provide specific typing for typescript
+  };
 }
