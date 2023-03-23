@@ -73,41 +73,6 @@ You usually will have your `ts` file and the related `html` file that will house
 
 In order to have access to the components, make sure the are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
 
-```mermaid
-flowchart TD
-    A{/app}
-    A -->|display| B(fa:fa-file-code app.component.html)
-    A --> C(fa:fa-file-code app.component.css)
-    A -->|app-root gets name| D(fa:fa-file-code app.component.ts)
-    C --> |import css| D
-    A -->|allow access in index.html & main.ts| E(fa:fa-file-code app.component.module.ts)
-    D --> E
-    A--> |only requires 2 files| F{/newCompontent1}
-    E --> B
-    F --> G(fa:fa-file-code CSS)
-    F --> H(fa:fa-file-code TypeScript)
-    H --> |inside the TS file| I[*  ##### Compontent_Sample ]
-    I --> E
-    E --> J[route back for access to index.html and main.ts and will be bundled by webpack]
- 
-```
-
-##### Compontent_Sample
-
-```TypeScript
-@Component {[
-        selector: 'app-new-compontent1
-        templateUrl:./path/to/html or template:<selector></selector>
-        may also include styleUrl: ['./css/path']
-        
-        export class ComponentName implements OnInit {
-            constructor() {}
-                ngOnInit() {
-        }
-    }'
-]}
-```
-
 #### Requirements
 
 All components is they must have a `selector` and `template`. 
@@ -144,11 +109,48 @@ spec.ts is used for testing. It is not a required file.
 
 This should also auto add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
 
-### Decorators
+#### Decorators
 
 You can identify a decorator in code since it will have an `@` before the element.
 
 You will have to configure these items by providing a JS object with the required information.
+
+### Example
+
+```mermaid
+flowchart TD
+    A{/app}
+    A -->|display| B(fa:fa-file-code app.component.html)
+    A --> C(fa:fa-file-code app.component.css)
+    A -->|app-root gets name| D(fa:fa-file-code app.component.ts)
+    C --> |import css| D
+    A -->|allow access in index.html & main.ts| E(fa:fa-file-code app.component.module.ts)
+    D --> E
+    A--> |only requires 2 files| F{/newCompontent1}
+    E --> B
+    F --> G(fa:fa-file-code CSS)
+    F --> H(fa:fa-file-code TypeScript)
+    H --> |inside the TS file| I[* CCompontent_Sample_Decorator ]
+    I --> E
+    E --> J[route back for access to index.html and main.ts and will be bundled by webpack]
+ 
+```
+
+##### Compontent_Sample_Decorator
+
+```Angular
+@Component {[
+        selector: 'app-new-compontent1
+        templateUrl:./path/to/html or template:<selector></selector>
+        may also include styleUrl: ['./css/path']
+        
+        export class ComponentName implements OnInit {
+            constructor() {}
+                ngOnInit() {
+        }
+    }'
+]}
+```
 
 ### Databinding
 
