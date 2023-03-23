@@ -176,6 +176,16 @@ Instead of using HTML events like `onClick`, you would use `(functionName)="meth
 
 You can pass the "event" into the associated method by providing `$event` as an argument to the method.
 
+You may need to provide specificity to typescript by going deeper into the element types of HTML.
+
+#### Two Way Binding
+
+Event binding + Property Binding = `[(two way binding!)]`
+
+Must have ngModel and FormModule imported on [module.ts](./my-first-app/src/app/app.module.ts) in order for must of this to function.
+
+You will see [an example of this here](./my-first-app/src/app/servers/servers.component.html)
+
 #### Which Binding?
 
 Use Databinding for string output.

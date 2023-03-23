@@ -3,9 +3,14 @@
   type="text"
   class="form-control"
   placeholder="Server Name"
-  (input)="onUpdateServerName($event)"
+  [(ngModel)]="serverName"
 >
-<p>{{serverName}}</p>
+<!--
+Line 6 is an example of two way data binding.
+Or you can use regular one way data binding/ event binding:
+(input)="onUpdateServerName($event)"
+-->
+<!-- <p>{{serverName}}</p> -->
 <br>
 <button
 class="btn btn-primary"
