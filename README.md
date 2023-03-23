@@ -38,6 +38,21 @@ If you want to include additional Angular modules they will need to be imported 
 
 From front the back main.ts if the first code that runs. `AppModule` is what started off the process. This content will be cross referenced within the app.module.ts. We have to know this content exists at inception.
 
+```mermaid
+flowchart TD
+    A(/src) --> B
+    B(main.ts) -->|inside main.ts| C["plateformBrowserDynamic().bootstrap(AppModule)"]
+    C -->|inside index.html| D(contains app-root)
+    D -->|path to import app-root| E{/app}
+    E -->|info to display| F(fa:fa-file-code app.component.html)
+    E -->|css| G(fa:fa-file-code app.component.css)
+    E -->|app-root gets name| H(fa:fa-file-code app.component.ts)
+    E -->|what should be accessable| I(fa:fa-file-code app.component.module.ts)
+    H --> I
+    I --> |finds compontents to access| C
+   
+```
+
 ### Components
 
 A component refers to modular code that will resolve themselves into a whole webpage related to a singular DOM. Example: A nav bar would be one component, while your footer would be another, a the main body a mix of several different components added together.
@@ -57,6 +72,41 @@ We use classes to create these components which are known as *Decorators*. We ha
 You usually will have your `ts` file and the related `html` file that will house the template `html` code.
 
 In order to have access to the components, make sure the are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
+
+```mermaid
+flowchart TD
+    A{/app}
+    A -->|display| B(fa:fa-file-code app.component.html)
+    A --> C(fa:fa-file-code app.component.css)
+    A -->|app-root gets name| D(fa:fa-file-code app.component.ts)
+    C --> |import css| D
+    A -->|allow access in index.html & main.ts| E(fa:fa-file-code app.component.module.ts)
+    D --> E
+    A--> |only requires 2 files| F{/newCompontent1}
+    E --> B
+    F --> G(fa:fa-file-code CSS)
+    F --> H(fa:fa-file-code TypeScript)
+    H --> |inside the TS file| I[*  ##### Compontent_Sample ]
+    I --> E
+    E --> J[route back for access to index.html and main.ts and will be bundled by webpack]
+ 
+```
+
+##### Compontent_Sample
+
+```TypeScript
+@Component {[
+        selector: 'app-new-compontent1
+        templateUrl:./path/to/html or template:<selector></selector>
+        may also include styleUrl: ['./css/path']
+        
+        export class ComponentName implements OnInit {
+            constructor() {}
+                ngOnInit() {
+        }
+    }'
+]}
+```
 
 #### Requirements
 
@@ -105,3 +155,5 @@ You will have to configure these items by providing a JS object with the require
 Communication between typescript components/business logic and the template.
 
 The only requirements for "string interpolation" is that it can resolve itself into a string. You cannot provide multiline logic.
+
+### Property Binding
