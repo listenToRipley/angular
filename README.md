@@ -159,3 +159,7 @@ Communication between typescript components/business logic and the template.
 The only requirements for "string interpolation" is that it can resolve itself into a string. You cannot provide multiline logic.
 
 ### Property Binding
+
+Providing a specific state to a HTML element through a method/state provided from your typescript.
+
+`[shows property binding in the html]`
