@@ -221,5 +221,12 @@ There is an else option which used the tag element of `ng-template` with a local
 
 `ngClass` a way to add CSS classes.
 
+[See example](./my-first-app/src/app/server/server.component.html)
+
+#### for
+
+`*ngFor=let name of list` 
+
 [See example](./my-first-app/src/app/servers/servers.component.html)
-\
+
+We don't pass information at this point, but can generate based on standard information.
