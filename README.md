@@ -11,33 +11,33 @@ Learning Angular from [Udemy.](https://www.udemy.com/course/the-complete-guide-t
 
 Uses Typescript.
 
-### Setting up new project
+### Setting up a new project
 
 `ng new new-project-name`
 
 Optional, include `--no-strict`
 
-You will be asked if you want to include routing and which style sheet format you want to use.
+You will be asked if you want to include routing and which style sheet format you wish to use.
 
 Set up to use [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 ### Bring up a Server
 
-`ng serve`, creates a working server where we can test information.
+`ng serve` creates a working server where we can test information.
 
-Default port will be provided when created, usually 4200.
+A default port will be provided when created, usually 4200.
 
-### Navigating Application
+### Navigating application
 
-The display for all content ends at the src/index.html. Content that is generated is provided inside of the body of that doc.
+The display for all content ends at the src/index.html. Content that is generated is provided inside the body of that doc.
 
-The content that is generated though src/app/app.component.html.
+The content is generated through src/app/app.component.html.
 
-To provide more dynamic fields information should be provided to src/app/app.component.ts.
+To provide more dynamic fields, information should be provided to src/app/app.component.ts.
 
-If you want to include additional Angular modules they will need to be imported and provided inside src/app/app.module.ts
+If you want to include additional Angular modules, they will need to be imported and provided inside src/app/app.module.ts
 
-From front the back main.ts if the first code that runs. `AppModule` is what started off the process. This content will be cross referenced within the app.module.ts. We have to know this content exists at inception.
+From the front, the back main.ts is the first code that runs. `AppModule` is what started off the process. This content will be cross-referenced within the app.module.ts. We have to know this content exists at inception.
 
 ```mermaid
 flowchart TD
@@ -50,51 +50,51 @@ flowchart TD
     E -->|app-root gets name| H(fa:fa-file-code app.component.ts)
     E -->|what should be accessable| I(fa:fa-file-code app.component.module.ts)
     H --> I
-    I --> |finds compontents to access| C
+    I --> |finds components to access| C
    
 ```
 
 ### Components
 
-A component refers to modular code that will resolve themselves into a whole webpage related to a singular DOM. Example: A nav bar would be one component, while your footer would be another, a the main body a mix of several different components added together.
+A component refers to modular code that will resolve itself into a whole webpage related to a singular DOM. Example: A nav bar would be one component, while your footer would be another, and the main body is a mix of several different components.
 
-The backbone of angular is components.
+The backbone of angular is components. They are a type of [Directives.](./README.md/#directives)
 
-You start with the "app" component which is the "root" of all components. Other children components will be nested inside of your root.
+You start with the "app" component, which is the "root" of all components. Other children components will be nested inside of your root.
 
-Application related contents, such a new components usually live inside of the [app folder](`./my-first-app/src/app`) folder.
+Application-related contents, such as new components, usually live inside the [app folder](`./my-first-app/src/app`) folder.
 
-Each component should have it's own folder and best practice states that folder should be titled after the component it contains.
+Each component should have its own folder, and best practice states that the folder should be titled after the component it contains.
 
-The naming convention usually goes: `title.component.ts`, this will also be the name of the component.
+The naming convention usually goes: `title.component.ts`; this will also be the component's name.
 
-We use classes to create these components which are known as *Decorators*. We have to import the component type to help differentiate between a regular typescript class and an angular component class. The class use is really what make it possible to reuse these elements.
+We use classes to create these components, known as *Decorators*. We must import the component type to help differentiate between a regular typescript class and an angular component class. The class use is what makes it possible to reuse these elements.
 
 You usually will have your `ts` file and the related `html` file that will house the template `html` code.
 
-In order to have access to the components, make sure the are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
+In order to have access to the components, make sure they are "registered" within the [module file](`./my-first-app/src/app/app.module.ts`)
 
 #### Requirements
 
-All components is they must have a `selector` and `template`.
+All components must have a `selector` and `template`.
 
 ##### Selectors
 
-You have multiple options when it comes to selectors. When you provide a straight string to the option it will be considered a html tag.
+You have multiple options when it comes to selectors. Providing a straight string to the element will be considered an html tag.
 
-If it is inside [] it will be an attribute.
+If it is inside [], it will be an attribute.
 
 If you add a . to the front of the string, it will be a class element.
 
-It is important to note that you will need to update your html file accordingly to it will display correctly.
+It is important to note that you will need to update your html file accordingly so it will display correctly.
 
-Use the html tag, add the component as an attribute inside another tag or include the class name inside the class attribute.
+Use the html tag, add the component as an attribute inside another tag, or include the class name inside the class attribute.
 
-While the selector can be an attribute, the attribute cannot be assigned to another component.
+While the selector can be an attribute, but the attribute cannot be assigned to another component.
 
 ##### Templates
 
-Either a `templateUrl` or `template`. Template will allow you to write inline html elements. Use backticks to allow for js functionality.
+Either a `templateUrl` or `template`. The template will allow you to write inline html elements. Use backticks to allow for js functionality.
 
 #### CLI Component Creation
 
@@ -104,11 +104,11 @@ There is also a shorthand.
 
 `ng g c newComponentName`
 
-This will create a folder inside of [app](./my-first-app/src/app/) with the provided new component name and a css, html, ts and spec.ts files.
+This will create a folder inside [app](./my-first-app/src/app/) with the provided new component name and a css, html, ts, and spec.ts files.
 
 spec.ts is used for testing. It is not a required file.
 
-This should also auto add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
+This should also auto-add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
 
 #### Decorators
 
@@ -159,13 +159,13 @@ flowchart TD
 
 Communication between typescript components/business logic and the template.
 
-The only requirements for "string interpolation" is that it can resolve itself into a string. You cannot provide multiline logic.
+The only requirement for "string interpolation" is that it can resolve itself into a string. You cannot provide multiline logic.
 
 You can identify it since you will see it `{{between double curly brackets}}`
 
 #### Property Binding
 
-Providing a specific state to a HTML element through a method/state provided from your typescript.
+Provide a specific state to an HTML element through a method/state from your typescript.
 
 `[shows property binding in the html]="followedTheVariableName"`
 
@@ -177,13 +177,13 @@ Instead of using HTML events like `onClick`, you would use `(functionName)="meth
 
 You can pass the "event" into the associated method by providing `$event` as an argument to the method.
 
-You may need to provide specificity to typescript by going deeper into the element types of HTML.
+You should provide specificity to typescript by going deeper into the element types of HTML.
 
-#### Two Way Binding
+#### Two-Way Binding
 
 Event binding + Property Binding = `[(two way binding!)]`
 
-Must have ngModel and FormModule imported on [module.ts](./my-first-app/src/app/app.module.ts) in order for must of this to function.
+Must have ngModel and FormModule imported on [module.ts](./my-first-app/src/app/app.module.ts) in order for most of this to function.
 
 You will see [an example of this here](./my-first-app/src/app/servers/servers.component.html)
 
@@ -193,10 +193,14 @@ Use Databinding for string output.
 
 Property binding for variable output/ functionality.
 
-Don't mix the two! It will break the functionality.
+Refrain from mixing the two! It will break the functionality.
 
-Events are used for results of expected action taken on a specific element.
+Events are used for the results of expected action taken on a specific element.
 
 [List of Properties](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 
 [List of Events](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+### Directives
+
+Instructions to the DOM. Usually, an attribute is within the component. You will provide these selector options similar to how you create Components. There are even built-in logical operators that allow us to create functionality.
