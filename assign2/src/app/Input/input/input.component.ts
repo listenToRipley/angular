@@ -14,4 +14,10 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onResetUsername() {
+    if (this.username.length > 0) {
+      this.username = ""
+    }
+  }
+
 }
