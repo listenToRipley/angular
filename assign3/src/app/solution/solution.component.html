@@ -1,4 +1,25 @@
 <div>
   <h2>Solutions</h2>
 
+  <div>
+    <button
+      class="btn btn btn-success"
+      (click)="onDisplay()"
+    >Display Details</button>
+    <br>
+    <div *ngIf="displayText else stopDisplay; index as id;" >
+      <div *ngFor="let time of clickLog">
+        <div
+        [ngClass]="{ fives: index >= 5 }"
+        [ngStyle]="{ backgroundColor: addBackgroundColor() }"
+        >
+          <span>{{ time }} </span> <span>{{ text }}</span>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #stopDisplay>
+      <p hidden></p>
+    </ng-template>
+  </div>
 </div>
