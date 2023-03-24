@@ -31,7 +31,7 @@ export class SolutionComponent implements OnInit {
   };
 
   addBackgroundColor() {
-    return this.background = this.clickLog.length <= 5 ? 'transparent': 'blue';
+    return this.background = this.clickLog.length < 5 ? 'transparent': 'blue';
   }
 
 }
