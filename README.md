@@ -5,10 +5,11 @@ Learning Angular from [Udemy.](https://www.udemy.com/course/the-complete-guide-t
 ## Table of Contents
 
 1. [My first application](./my-first-app/README.md)
+2. [Assignment 2](./assign2/README.md)
 
 ## Using Angular
 
-Uses Typescript. 
+Uses Typescript.
 
 ### Setting up new project
 
@@ -65,7 +66,7 @@ Application related contents, such a new components usually live inside of the [
 
 Each component should have it's own folder and best practice states that folder should be titled after the component it contains.
 
-The naming convention usually goes: `title.component.ts`, this will aslo be the name of the component.
+The naming convention usually goes: `title.component.ts`, this will also be the name of the component.
 
 We use classes to create these components which are known as *Decorators*. We have to import the component type to help differentiate between a regular typescript class and an angular component class. The class use is really what make it possible to reuse these elements.
 
@@ -75,7 +76,7 @@ In order to have access to the components, make sure the are "registered" within
 
 #### Requirements
 
-All components is they must have a `selector` and `template`. 
+All components is they must have a `selector` and `template`.
 
 ##### Selectors
 
