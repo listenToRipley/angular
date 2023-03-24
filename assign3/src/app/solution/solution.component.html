@@ -7,17 +7,15 @@
       (click)="onDisplay()"
     >Display Details</button>
     <br>
-    <div *ngIf="displayText else stopDisplay; index as id;" >
-      <div *ngFor="let time of clickLog">
-        <div
-        [ngClass]="{ fives: index >= 5 }"
-        [ngStyle]="{ backgroundColor: addBackgroundColor() }"
-        >
-          <span>{{ time }} </span> <span>{{ text }}</span>
-        </div>
+    <div *ngIf="displayText else stopDisplay;" >
+      <p>{{ text }}</p>
+      <div
+        *ngFor="let time of clickLog"
+        [ngClass]="{ fives: clickLog.length >= 5 }"
+        [ngStyle]="{ backgroundColor: addBackgroundColor() }">
+        {{ time }}
       </div>
     </div>
-
     <ng-template #stopDisplay>
       <p hidden></p>
     </ng-template>
