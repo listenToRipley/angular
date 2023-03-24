@@ -24,7 +24,7 @@ export class ServersComponent implements OnInit {
     },2000)
   }
 
-  ngOnInit() {
+  ngOnInit() { 
 
   }
 
