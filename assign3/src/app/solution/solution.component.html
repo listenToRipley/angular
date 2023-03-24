@@ -10,9 +10,9 @@
     <div *ngIf="displayText else stopDisplay;" >
       <p>{{ text }}</p>
       <div
-        *ngFor="let time of clickLog"
-        [ngClass]="{ fives: clickLog.length >= 5 }"
-        [ngStyle]="{ backgroundColor: addBackgroundColor() }">
+        *ngFor="let time of clickLog; let i = index"
+        [ngClass]="{ fives: i > 4 }"
+        [ngStyle]="{ backgroundColor: i <= 4 ?'transparent': 'blue' }">
         {{ time }}
       </div>
     </div>

@@ -22,7 +22,7 @@ export class SolutionComponent implements OnInit {
   }
 
   onDisplay() {
-    let time = `${new Date().getTime()}`
+    let time = `${new Date()}`
 
     this.displayText = !this.displayText;
 
@@ -30,8 +30,8 @@ export class SolutionComponent implements OnInit {
 
   };
 
-  addBackgroundColor() {
-    return this.background = this.clickLog.length < 5 ? 'transparent': 'blue';
-  }
+  // addBackgroundColor() {
+  //   return this.background = this.clickLog.length < 5 ? 'transparent': 'blue';
+  // }
 
 }
