@@ -204,3 +204,7 @@ Events are used for the results of expected action taken on a specific element.
 ### Directives
 
 Instructions to the DOM. Usually, an attribute is within the component. You will provide these selector options similar to how you create Components. There are even built-in logical operators that allow us to create functionality.
+
+`*ngIf="condition, boolean"`, provides if statement.
+
+There is an else option which used the tag element of `ng-template` with a local reference `#Reference`. Then inside your `ngIf` condition, you would include else and the reference name. [See example](./my-first-app/src/app/servers/servers.component.html)
