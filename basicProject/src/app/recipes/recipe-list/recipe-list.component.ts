@@ -9,6 +9,7 @@ import { Recipe } from "../recipe.model";
 })
 export class RecipeListComponent {
   recipes: Recipe[] = [
+    new Recipe("Banana Bacon Pancakes", "Oatmeal and Banana pancakes with Bacon", "https://preview.redd.it/whq4ugmvjks41.jpg?auto=webp&s=905b3fa2740efd052a9e09304d819d2fccc981e5"),
     new Recipe("Banana Bacon Pancakes", "Oatmeal and Banana pancakes with Bacon", "https://preview.redd.it/whq4ugmvjks41.jpg?auto=webp&s=905b3fa2740efd052a9e09304d819d2fccc981e5")
   ];
 
