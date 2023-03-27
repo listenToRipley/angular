@@ -110,6 +110,8 @@ This will create a folder inside [app](./my-first-app/src/app/) with the provide
 
 spec.ts is used for testing. It is not a required file.
 
+To exclude the creation of testing files, include `--skip-tests` after the component name.
+
 This should also auto-add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
 
 #### Decorators
@@ -227,7 +229,7 @@ There is an else option which used the tag element of `ng-template` with a local
 
 #### for
 
-`*ngFor=let name of list` 
+`*ngFor=let name of list`
 
 [See example](./my-first-app/src/app/servers/servers.component.html)
 
