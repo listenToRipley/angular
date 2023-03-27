@@ -3,6 +3,16 @@
   <div class="col-xs-10">
     <app-shopping-edit></app-shopping-edit>
     <hr>
-    <p>placeholder for list</p>
+    <ul class="list-group">
+      <li
+        *ngFor="let ingredient of ingredients"
+        class="list-group-item"
+        >
+        <a
+        style="cursor: pointer">
+        {{ingredient.amount}} | {{ingredient.name}}, {{ingredient.measurement}}
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
