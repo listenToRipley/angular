@@ -7,6 +7,7 @@ Learning Angular from [Udemy.](https://www.udemy.com/course/the-complete-guide-t
 1. [My first application](./my-first-app/README.md)
 2. [Assignment 2](./assign2/README.md)
 3. [Assignment 3](./assign3/README.md)
+4. [Project 1](./basicProject/README.md)
 
 ## Using Angular
 
@@ -109,7 +110,11 @@ This will create a folder inside [app](./my-first-app/src/app/) with the provide
 
 spec.ts is used for testing. It is not a required file.
 
+To exclude the creation of testing files, include `--skip-tests` after the component name.
+
 This should also auto-add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
+
+You can specify the path (to make nested components) by providing the relative path location. Relative as it will start in the `app` folder. Example `ng g c relativeFolder/newComponentName --skip-tests`
 
 #### Decorators
 
@@ -226,7 +231,7 @@ There is an else option which used the tag element of `ng-template` with a local
 
 #### for
 
-`*ngFor=let name of list` 
+`*ngFor=let name of list`
 
 [See example](./my-first-app/src/app/servers/servers.component.html)
 
