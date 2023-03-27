@@ -8,6 +8,7 @@ Learning Angular from [Udemy.](https://www.udemy.com/course/the-complete-guide-t
 2. [Assignment 2](./assign2/README.md)
 3. [Assignment 3](./assign3/README.md)
 4. [Project 1](./basicProject/README.md)
+5. [Debugging](./debugging/README.md)
 
 ## Using Angular
 
