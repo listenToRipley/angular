@@ -114,6 +114,8 @@ To exclude the creation of testing files, include `--skip-tests` after the compo
 
 This should also auto-add your file to the [module](./my-first-app/src/app/app.module.ts), but make sure you verify the registration.
 
+You can specify the path (to make nested components) by providing the relative path location. Relative as it will start in the `app` folder. Example `ng g c relativeFolder/newComponentName --skip-tests`
+
 #### Decorators
 
 You can identify a decorator in code since it will have an `@` before the element.
