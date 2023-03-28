@@ -14,6 +14,10 @@ Provide a specific state to an HTML element through a method/state from your typ
 
 You can see examples of this in the [servers files](./my-first-app/src/app/servers/)
 
+### Custom Property Binding
+
+
+
 ## Event Binding
 
 Instead of using HTML events like `onClick`, you would use `(functionName)="methodFromTSFile"` to provide the event functionality.
@@ -66,7 +70,7 @@ There is an else option which used the tag element of `ng-template` with a local
 
 [See example](./my-first-app/src/app/server/server.component.html)
 
-## for
+### for
 
 `*ngFor=let name of list`
 
