@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { ServerElement } from './shared/serverElement.model';
 
@@ -8,7 +8,5 @@ import { ServerElement } from './shared/serverElement.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements: ServerElement[] = [{type: "Server1", name:"Test Server", content:"Just a test!"}];
-  newServerName = '';
-  newServerContent = '';
+  serverElements: ServerElement[] = [{type: "server", name:"Test Server", content:"Just a test!"}];
 }

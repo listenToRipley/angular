@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, NgModule } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { ServerElement } from '../shared/serverElement.model';
 
@@ -7,13 +7,6 @@ import { ServerElement } from '../shared/serverElement.model';
   templateUrl: './server-element.component.html',
   styleUrls: ['./server-element.component.css']
 })
-export class ServerElementComponent implements OnInit {
-
-  @Input() element: ServerElement // now exposed to the world
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ServerElementComponent {
+  @Input() element: ServerElement; // now fully exposed
 }
