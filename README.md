@@ -11,11 +11,35 @@ Learning Angular from [Udemy.](https://www.udemy.com/course/the-complete-guide-t
 5. [Debugging](./debugging/README.md)
 6. [Databinding](./databinding/)
 
-## Using Angular
+## These projects
 
-Uses Typescript.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
-### Setting up a new project
+This section covers the starting process for these projects
+
+### Bring up a Server
+
+`ng serve` creates a working server where we can test information.
+
+A default port will be provided when created, usually 4200.
+
+### Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+### Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+### Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+### Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Setting up a new project
 
 `ng new new-project-name`
 
@@ -24,12 +48,6 @@ Optional, include `--no-strict`
 You will be asked if you want to include routing and which style sheet format you wish to use.
 
 Set up to use [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-
-### Bring up a Server
-
-`ng serve` creates a working server where we can test information.
-
-A default port will be provided when created, usually 4200.
 
 ### Navigating application
 
@@ -102,7 +120,7 @@ Either a `templateUrl` or `template`. The template will allow you to write inlin
 
 #### CLI Component Creation
 
-`ng generate component newComponentName`
+Run `ng generate component componentName` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 There is also a shorthand.
 

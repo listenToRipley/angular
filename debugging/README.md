@@ -1,6 +1,6 @@
 # Debugging
 
-The console refered to below, is your browser console.
+The console referred to below, is your browser console.
 
 ## Use the Console
 
