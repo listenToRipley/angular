@@ -8,5 +8,5 @@ import { ServerElement } from '../shared/serverElement.model';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent {
-  @Input() element: ServerElement; // now fully exposed
+  @Input("srvElement") element: ServerElement; // now fully exposed
 }

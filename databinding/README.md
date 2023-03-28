@@ -24,9 +24,25 @@ This is a two part process to provide information from the parent element to the
 
 1. Create [property binding](#property-binding) to component you wish to have access to the associated element. [View example here](./src/app/app.component.html)
 
-2. Provide "Input" to your angular import statement at the time, and then add an [input decorator](../README.md/#decorators) to your associated variable. It will look like this: `@Input() variableName: type = "value"`, [view example](./src/app/server-element/server-element.component.html). 
+2. Provide "Input" to your angular import statement at the time, and then add an [input decorator](../README.md/#decorators) to your associated variable. It will look like this: `@Input() variableName: type = "value"`, [view example](./src/app/server-element/server-element.component.html).
 
 This will also any parent element that contains that child component, will now be able to access the associated variable.
+
+#### Alias
+
+You can provide an alias to your binding. Whatever name your use as your bound value within the parent component, you then provide that name to your Input decorator.
+
+#### Reverse notification
+
+If something changes in your child, you want to make sure the parent element knows.
+
+Instead of inputting content, you are basically outputting what is received. You do this by using [EventEmitter](https://angular.io/api/core/EventEmitter).
+
+You would use `new EventEmitter<type>()`. To outline the use of the information being imported from the parent element.
+
+Once you have set the information and passed it to any created method, you will also need to include the decorator `Output`.
+
+[View example](./src/app/cockpit/cockpit.component.ts)
 
 ## Event Binding
 
