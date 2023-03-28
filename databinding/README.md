@@ -16,7 +16,17 @@ You can see examples of this in the [servers files](./my-first-app/src/app/serve
 
 ### Custom Property Binding
 
+We can use this type of binding to bind properties of a given component. A way to pass values across components.
 
+You need to remember the binding in general has a scope specific to the component you are currently working within.
+
+This is a two part process to provide information from the parent element to the child and then to read it back.
+
+1. Create [property binding](#property-binding) to component you wish to have access to the associated element. [View example here](./src/app/app.component.html)
+
+2. Provide "Input" to your angular import statement at the time, and then add an [input decorator](../README.md/#decorators) to your associated variable. It will look like this: `@Input() variableName: type = "value"`, [view example](./src/app/server-element/server-element.component.html). 
+
+This will also any parent element that contains that child component, will now be able to access the associated variable.
 
 ## Event Binding
 

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+
+import { ServerElement } from './shared/serverElement.model';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [];
+  serverElements: ServerElement[] = [{type: "Server1", name:"Test Server", content:"Just a test!"}];
   newServerName = '';
   newServerContent = '';
 }
