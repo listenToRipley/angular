@@ -28,10 +28,6 @@ This is a two part process to provide information from the parent element to the
 
 This will also any parent element that contains that child component, will now be able to access the associated variable.
 
-#### Alias
-
-You can provide an alias to your binding. Whatever name your use as your bound value within the parent component, you then provide that name to your Input decorator.
-
 #### Reverse notification
 
 If something changes in your child, you want to make sure the parent element knows.
@@ -43,6 +39,10 @@ You would use `new EventEmitter<type>()`. To outline the use of the information 
 Once you have set the information and passed it to any created method, you will also need to include the decorator `Output`.
 
 [View example](./src/app/cockpit/cockpit.component.ts)
+
+#### Alias
+
+You can provide an alias to your binding. Whatever name your use as your bound value within the parent component, you then provide that name to your Input decorator or Output decorator.
 
 ## Event Binding
 
