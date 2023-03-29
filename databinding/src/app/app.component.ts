@@ -9,23 +9,22 @@ import { ServerElement } from './shared/serverElement.model';
 })
 export class AppComponent {
 
+  serverElements: ServerElement[] = [{type: 'server', name:'Test Server', content:'Just a test!'}];
 
-  serverElements: ServerElement[] = [{type: "server", name:"Test Server", content:"Just a test!"}];
-
-  onServerAdded(serverName: {serverName:string, serverContent:string}) {
+  onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'server',
-      name: serverName.serverName,
-      content: serverName.serverContent
+      name: serverData.serverName,
+      content: serverData.serverContent
     });
   }
 
-  onBluePrintAdded(bluePrintName: {serverName:string, serverContent:string}) {
+  onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'blueprint',
-      name: bluePrintName.serverName,
-      content: bluePrintName.serverContent
-     });
+      name: blueprintData.serverName,
+      content: blueprintData.serverContent
+    });
   }
 
 }
