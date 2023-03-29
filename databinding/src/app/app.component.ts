@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ServerElement } from './shared/serverElement.model';
 
@@ -7,9 +7,15 @@ import { ServerElement } from './shared/serverElement.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   serverElements: ServerElement[] = [{type: 'server', name:'Test Server', content:'Just a test!'}];
+
+  constructor() {};
+
+  ngOnInit(): void {
+
+  }
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
