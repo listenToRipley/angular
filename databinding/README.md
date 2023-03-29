@@ -103,3 +103,16 @@ There is an else option which used the tag element of `ng-template` with a local
 [See example](./my-first-app/src/app/servers/servers.component.html)
 
 We don't pass information at this point, but can generate based on standard information.
+
+## Encapsulation
+
+This refers the way the Angular groups together elements from the same components by provides a specified class name. There will be a secondary attribute/selector added to any elements referred within the associated CSS. This can effect how CSS variables are assigned and displayed. This is sometimes referred to as a "shadow DOM"
+
+This type of encapsulation can be removed by providing `encapsulation: ViewEncapsulation.None` inside `@Component`.
+
+**Word of caution*, if you provide this option of None, then your CSS will be applied Globally.
+
+Your two other options with "ViewEncapsulation" are:
+
+- Emulated - this is the default. 
+- ShadowDom - almost the say as emulated, but will be provided only on browsers that support it.
